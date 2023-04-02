@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Quản Lí Khen Thưởng Sinh Viên</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: NiceAdmin - v2.5.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <span class="d-none d-lg-block">Quản Lí Khen Thưởng</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+        <!-- End Logo -->
+
+        <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
+        <!-- End Search Bar -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li>
+                <!-- End Search Icon-->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge bg-primary badge-number">4</span>
+                    </a>
+                    <!-- End Notification Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                        <li class="dropdown-header">
+                            You have 4 new notifications
+                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-exclamation-circle text-warning"></i>
+                            <div>
+                                <h4>Lorem Ipsum</h4>
+                                <p>Quae dolorem earum veritatis oditseno</p>
+                                <p>30 min. ago</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-x-circle text-danger"></i>
+                            <div>
+                                <h4>Atque rerum nesciunt</h4>
+                                <p>Quae dolorem earum veritatis oditseno</p>
+                                <p>1 hr. ago</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-check-circle text-success"></i>
+                            <div>
+                                <h4>Sit rerum fuga</h4>
+                                <p>Quae dolorem earum veritatis oditseno</p>
+                                <p>2 hrs. ago</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-info-circle text-primary"></i>
+                            <div>
+                                <h4>Dicta reprehenderit</h4>
+                                <p>Quae dolorem earum veritatis oditseno</p>
+                                <p>4 hrs. ago</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="dropdown-footer">
+                            <a href="#">Show all notifications</a>
+                        </li>
+
+                    </ul>
+                    <!-- End Notification Dropdown Items -->
+
+                </li>
+                <!-- End Notification Nav -->
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Kas</span>
+                    </a>
+                    <!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>Trần Quốc Tuấn</h6>
+                            <span>Sinh Viên</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                <i class="bi bi-gear"></i>
+                                <span>Quản Lí Tài Khoản</span>
+                            </a>
+                        </li>
+
+                        <hr class="dropdown-divider">
+                </li>
+
+                <li>
+                    <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Đăng Xuất</span>
+                    </a>
+                </li>
+
+                </ul>
+                <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav>
+        <!-- End Icons Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="users-profile.html">
+                    <i class="bi bi-person"></i>
+                    <span>Thông Tin</span>
+                </a>
+            </li>
+            <!-- End Profile Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-dhcb.html">
+                    <i class="bi bi-card-list"></i>
+                    <span>Danh Hiệu Của Bạn</span>
+                </a>
+            </li>
+            <!-- End Register Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-dsdh.html">
+                    <i class="bi bi-card-list"></i>
+                    <span>Danh sách Danh Hiệu</span>
+                </a>
+            </li>
+            <!-- End Register Page Nav -->
+
+        </ul>
+
+    </aside>
+    <!-- End Sidebar-->
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Trang chủ</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                </ol>
+            </nav>
+        </div>
+        <!-- End Page Title -->
+
+        <section class="section dashboard">
+            <div class="row">
+
+                <!-- Left side columns -->
+                <div class="col-lg-8">
+                    <div class="row">
+
+                        <!-- News & Updates Traffic -->
+                        <div class="card">
+
+                            <div class="card-body pb-0">
+                                <h5 class="card-title">News &amp; Updates </h5>
+
+                                <div class="news">
+                                    <div class="post-item clearfix">
+                                        <img src="assets/img/news-1.jpg" alt="">
+                                        <h4><a href="#">[Đoàn khoa Phát triển Nông thôn] Thăm viếng đền Hùng tại thành phố Cần Thơ năm 2023</a></h4>
+                                        <p>Tháng 3 hằng năm là Tháng Thanh niên. Tháng Thanh niên được tổ chức nhằm phát huy tinh thần xung kích, tình nguyện, sáng tạo của thanh niên để tham gia hoạt động vì lợi ích của cộng đồng, xã hội và vận động tổ chức,
+                                            cá nhân đầu tư, phát triển thanh niên.Ngày 12/03/2023 vừa qua Đoàn khoa Phát triển Nông thôn đã tổ chức hoạt động “Thăm viếng đền thờ các vua Hùng” tại Cần Thơ. Nhân kỷ niệm 92 năm thành lập Đoàn TNCS Hồ Chí
+                                            Minh (26/3/1931 – 26/3/2023).</p>
+                                    </div>
+
+                                    <div class="post-item clearfix">
+                                        <img src="assets/img/news-2.jpg" alt="">
+                                        <h4><a href="#">[Đoàn trường Nông nghiệp - Đoàn trường Bách Khoa] Hành trình đến Bảo tàng Quân khu 9</a></h4>
+                                        <p>Nhằm hưởng ứng Chuỗi hoạt động Tháng thanh niên năm 2023, sáng ngày 19/03/2023 Đoàn trường Nông Nghiệp đã phối hợp với Đoàn trường Bách Khoa tổ chức hoạt động Hành trình đến Bảo tàng Quân khu 9. Thông qua hoạt động,
+                                            các bạn sinh viên trường Nông Nghiệp và trường Bách Khoa có cơ hội gặp gỡ và giao lưu với nhau. Bên cạnh đó các bạn cũng được tìm hiểu và tiếp xúc gần hơn với lịch sử hào hùng của dân tộc, từ đó củng cố và phát
+                                            huy tinh thần nhiệt huyết tuổi trẻ của Thanh niên.</p>
+                                    </div>
+
+                                    <div class="post-item clearfix">
+                                        <img src="assets/img/news-3.jpg" alt="">
+                                        <h4><a href="#">[CLB Tiếng Anh] - Buổi sinh hoạt tiếng Anh đầu tiên của học kỳ 2 năm 2022-2023</a></h4>
+                                        <p>Vào ngày 01 tháng 03 vừa qua, Câu lạc bộ Tiếng Anh trực thuộc Hội Sinh viên trường Đại học Cần Thơ đã tổ chức thành công buổi sinh hoạt tiếng Anh đầu tiên của học kỳ 1 năm học 2022-2023.</p>
+                                    </div>
+
+                                    <div class="post-item clearfix">
+                                        <img src="assets/img/news-4.jpg" alt="">
+                                        <h4><a href="#">[LCHSV Hậu Giang] - Tổng kết chuỗi hoạt động tình nguyện “Tháng thanh niên”</a></h4>
+                                        <p>Rạng sáng ngày 19/3/2023, LCHSV Hậu Giang đã phối hợp với các bên liên quan, đồng loạt ra quân tổ chức chuỗi hoạt động tình nguyện “Tháng thanh niên” tại 2 huyện Châu Thành và Phụng Hiệp.</p>
+                                    </div>
+
+                                    <div class="post-item clearfix">
+                                        <img src="assets/img/news-5.jpg" alt="">
+                                        <h4><a href="#">[Đoàn khoa Ngoại ngữ] - Tham quan Di tích Lịch sử - Văn hóa Căn cứ Vườn Mận Thành phố Cần Thơ</a></h4>
+                                        <p>Nhằm thiết thực chào mừng Kỷ niệm 92 năm Ngày thành lập Đoàn TNCS Hồ Chí Minh (26/3/1931 - 26/3/2023) và tổ chức hoạt động chào mừng Tháng Thanh niên năm 2023. Đồng thời, đẩy mạnh bồi dưỡng lý tưởng cách mạng, khơi
+                                            dậy trong Đoàn viên truyền thống Uống nước nhớ nguồn, tạo động lực mạnh mẽ cho Đoàn viên phấn đấu và rèn luyện; tạo điều kiện cho Đoàn viên tìm hiểu về các địa danh lịch sử, từ đó đẩy mạnh các hoạt động tri
+                                            ân, đền ơn đáp nghĩa. Sáng ngày 19/3/2023 BCH Đoàn khoa Ngoại ngữ đã tổ chức Hành trình về Địa chỉ đỏ - “Thanh niên tiếp bước lịch sử” hưởng ứng Tháng Thanh niên Khoa Ngoại ngữ, Học kỳ II, năm học 2022 – 2023
+                                            tại Căn cứ Vườn mận cùng các Thành viên và CTV Đoàn khoa Ngoại ngữ.</p>
+                                    </div>
+
+                                </div>
+                                <!-- End sidebar recent posts-->
+
+                            </div>
+                        </div>
+                        <!-- End News & Updates -->
+
+                    </div>
+                </div>
+                <!-- End Left side columns -->
+
+                <!-- Right side columns -->
+                <div class="col-lg-4">
+
+                    <!-- Recent Activity -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoạt Động Gần Đây</h5>
+
+                            <div class="activity">
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">26/3/2023</div>
+                                    <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                    <div class="activity-content">
+                                        Hội thi trang trí không gian văn hóa các nước.
+                                    </div>
+                                </div>
+                                <!-- End activity item-->
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">26/3/2023</div>
+                                    <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                                    <div class="activity-content">
+                                        Hội thi ẩm thực "Hương Vị Đồng Bằng".
+                                    </div>
+                                </div>
+                                <!-- End activity item-->
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">26/3/2023</div>
+                                    <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                                    <div class="activity-content">
+                                        Hội thi hát tập thể "Thanh Niên Làm Theo Lời Bác".
+                                    </div>
+                                </div>
+                                <!-- End activity item-->
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">26/3/2023</div>
+                                    <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
+                                    <div class="activity-content">
+                                        Hội thi trang phục, âm nhạc dân tộc các nước.
+                                    </div>
+                                </div>
+                                <!-- End activity item-->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End Recent Activity -->
+
+                </div>
+                <!-- End Right side columns -->
+
+            </div>
+        </section>
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            Trường Đại học Cần Thơ (Can Tho University)
+        </div>
+        <div class="copyright">
+            Khu II, đường 3/2, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ.
+        </div>
+        <div class="copyright">
+            Điện thoại: (84-292) 3832663 - (84-292) 3838474; Fax: (84-292) 3838474; Email: dhct@ctu.edu.vn
+        </div>
+        <div class="credits">
+            Designed by Trần Quốc Tuấn</div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
