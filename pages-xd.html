@@ -50,6 +50,8 @@
         </div>
         <!-- End Logo -->
 
+
+
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
@@ -110,7 +112,7 @@
             <!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
+                <a class="nav-link collapsed" href="admin-profile.html">
                     <i class="bi bi-person"></i>
                     <span>Thông Tin</span>
                 </a>
@@ -118,21 +120,28 @@
             <!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-dhcb.html">
+                <a class="nav-link collapsed" href="pages-dsdh-admin.html">
                     <i class="bi bi-card-list"></i>
-                    <span>Danh Hiệu Của Bạn</span>
+                    <span>Danh Sách Danh Hiệu</span>
                 </a>
             </li>
             <!-- End Register Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-dsdh.html">
+                <a class="nav-link collapsed" href="pages-xdkt.html">
                     <i class="bi bi-card-list"></i>
-                    <span>Danh sách Danh Hiệu</span>
+                    <span>Xét Duyệt Khen Thưởng</span>
                 </a>
             </li>
             <!-- End Register Page Nav -->
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-tk.html">
+                    <i class="bi bi-card-list"></i>
+                    <span>Thống kê</span>
+                </a>
+            </li>
+            <!-- End Register Page Nav -->
         </ul>
 
     </aside>
@@ -141,11 +150,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Danh Hiệu Của Bạn</h1>
+            <h1>Xét Duyệt Khen Thưởng</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Danh Hiệu Của Bạn</li>
+                    <li class="breadcrumb-item active">Xét Duyệt Khen Thưởng</li>
+                    <li class="breadcrumb-item active">Xét Duyệt</li>
                 </ol>
             </nav>
         </div>
@@ -157,43 +167,53 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Danh Sách Danh Hiệu Của Bạn</h5>
+                            <h5 class="card-title">Đăng Kí Danh Hiệu</h5>
 
-                            <!-- Default Table -->
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Mã Danh Hiệu</th>
-                                        <th scope="col">Tên Danh Hiệu</th>
-                                        <th scope="col">Đợt Thi Đua</th>
-                                        <th scope="col">Đối Tượng</th>
-                                        <th scope="col">Quyết Định</th>
-                                        <th scope="col">Ngày Quyết Định</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>159486</td>
-                                        <td>Sinh Viên 5 Dốt</td>
-                                        <td>HK2 (2023 - 2024)</td>
-                                        <td>Sinh Viên</td>
-                                        <td><a href="https://www.facebook.com/">Tải Xuống</a></td>
-                                        <td>04/11/2023</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- End Default Table Example -->
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
+                            <!-- General Form Elements -->
+                            <form>
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Mã Số Sinh Viên</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Họ và Tên</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Danh Hiệu</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputNumber" class="col-sm-2 col-form-label">File Chứng Nhận</label>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label">Trạng Thái</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-select" aria-label="Default select example">
+                                        <option selected>Đã Xem</option>
+                                        <option value="1">Được Đề Nghị Xét Duyệt</option>
+                                        <option value="2">Không Được Đề Nghị Xét Duyệt</option>
+                                        <option value="3">Đạt Danh Hiệu</option>
+                                        <option value="4">Không Đạt Danh Hiệu</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label"></label>
+                                    <div class="col-sm-10">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+                                            Xác Nhận
+                                          </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- End General Form Elements -->
     </main>
     <!-- End #main -->
 
