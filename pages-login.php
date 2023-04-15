@@ -1,3 +1,16 @@
+<?php
+    include '../NLCS/classes/login.php';
+?>
+<?php
+    $class = new login(); 
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $userName = $_POST['userName'];
+        $passWord = md5($_POST['passWord']);
+
+        $login_check = $class->login__sv($userName, $passWord);
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +61,7 @@
                         <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
                             <div class="d-flex justify-content-center py-4">
-                                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                                <a href="index.php" class="logo d-flex align-items-center w-auto">
                                     <span class="d-none d-lg-block">Quản Lí Khen Thưởng</span>
                                 </a>
                             </div>
@@ -61,20 +74,26 @@
                                     <div class="pt-4 pb-2">
                                         <h5 class="card-title text-center pb-0 fs-4">Đăng Nhập</h5>
                                     </div>
-
-                                    <form class="row g-3 needs-validation" novalidate>
-
+                                    
+                                    <form action="pages-login.php" method="post" class="row g-3 needs-validation" novalidate>
+                                        <span style="color: red; text-align: center;">
+                                            <?php
+                                            if(isset($login_check)){
+                                                echo $login_check;
+                                            }
+                                            ?>
+                                        </span>
                                         <div class="col-12">
                                             <label for="yourUsername" class="form-label">Mã Số Sinh Viên</label>
                                             <div class="input-group has-validation">
-                                                <input type="text" name="username" class="form-control" id="yourUsername" required>
+                                                <input type="text" name="userName" class="form-control" id="yourUsername" required="" placeholder="Mã số đăng nhập">
                                                 <div class="invalid-feedback">Please enter your username.</div>
                                             </div>
                                         </div>
 
                                         <div class="col-12">
                                             <label for="yourPassword" class="form-label">Mật khẩu</label>
-                                            <input type="password" name="password" class="form-control" id="yourPassword" required>
+                                            <input type="password" name="passWord" class="form-control" id="yourPassword" required="" placeholder="Mật khẩu">
                                             <div class="invalid-feedback">Please enter your password!</div>
                                         </div>
 
@@ -87,6 +106,7 @@
                                         <div class="col-12">
                                             <button class="btn btn-primary w-100" type="submit">Đăng Nhập</button>
                                         </div>
+                                        
                                     </form>
 
                                 </div>
