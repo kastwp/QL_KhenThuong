@@ -67,7 +67,7 @@ include 'inc/sidebar.php';
                                             <td>' . $item['id'] . '</td>
                                             <td>' . $item['hoten'] . '</td>
                                             <td>' . $item['name'] . '</td>
-                                            <td><a href="https://www.facebook.com/">Xem Chứng Nhận</a></td>
+                                            <td><a  href="../NLCS/assets/img/03_3361KHTH_31-08-2021.pdf">Xem Chứng Nhận</a></td>
                                             <td>
                                                 '.$status.'
                                             </td>

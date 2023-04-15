@@ -58,7 +58,7 @@ include 'inc/sidebar.php';
                                             <td>'.$item['name'].'</td>
                                             <td>'.$item['dotthidua'].'</td>
                                             <td>'.$item['doituong'].'</td>
-                                            <td><a href="https://www.facebook.com/">Tải Xuống</a></td>
+                                            <td><a href="../NLCS/assets/img/03_3361KHTH_31-08-2021.pdf">Tải Xuống</a></td>
                                             <td>'.$item['created_at'].'</td>
                                         </tr>';
                                     }

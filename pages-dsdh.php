@@ -45,7 +45,7 @@ include 'inc/sidebar.php';
                             
                         }
                         if ($_SESSION['role']) {
-                            echo '<a href="/add_dh.php" class="btn btn-success">Thêm danh hiệu</a>';
+                            echo '<a href="../NLCS/add_dh.php" class="btn btn-success">Thêm danh hiệu</a>';
                         }
                         ?>
                         <!-- Default Table -->
@@ -75,7 +75,7 @@ include 'inc/sidebar.php';
                                             <td><a href="edit-dh.php?id='.$item['id'].'">'.$item['name'].'</a></td>
                                             <td>' . $item['dotthidua'] . '</td>
                                             <td>' . $item['doituong'] . '</td>
-                                            <td><a href="https://www.facebook.com/">Xem Quyết Định</a></td>
+                                            <td><a href="../NLCS/assets/img/03_3361KHTH_31-08-2021.pdf">Xem Quyết Định</a></td>
                                             <td>' . $item['ngaybatdau'] . '</td>
                                             <td>' . $item['ngayketthuc'] . '</td>
                                             <td>

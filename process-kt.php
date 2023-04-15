@@ -9,7 +9,7 @@ if (isset($_SERVER['REQUEST_METHOD']) == 'POST') {
     $sql = "UPDATE dangky_danhhieu SET `status` = $action WHERE id = $dkdh_id";
     $result = $db->update($sql);
 
-    header("Location: ./pages-dkdh.php");
+    header("Location: ./pages-xdkt.php");
 }
 
 ?>
