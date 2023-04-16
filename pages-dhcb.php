@@ -6,10 +6,13 @@ $data = [];
 $user_id = $_SESSION['id'];
 $sql = "SELECT * FROM dangky_danhhieu dkdh
         JOIN danhhieu dh ON dkdh.dh_id = dh.id
-WHERE user_id = $user_id";
+WHERE dkdh.user_id = $user_id AND dkdh.status = 1";
+echo $sql;
 $result = $db->select($sql);
-while ($row = mysqli_fetch_array($result,1)) {
-    $data[] = $row;
+if ($result) {
+    while ($row = mysqli_fetch_array($result, 1)) {
+        $data[] = $row;
+    }
 }
 
 include 'inc/header.php';
@@ -51,17 +54,19 @@ include 'inc/sidebar.php';
                             </thead>
                             <tbody>
                                 <?php
+                                if ($data) {
                                     foreach ($data as $item) {
                                         echo '
-                                        <tr>
-                                            <td>'.$item['id'].'</td>
-                                            <td>'.$item['name'].'</td>
-                                            <td>'.$item['dotthidua'].'</td>
-                                            <td>'.$item['doituong'].'</td>
-                                            <td><a href="../NLCS/assets/img/03_3361KHTH_31-08-2021.pdf">Tải Xuống</a></td>
-                                            <td>'.$item['created_at'].'</td>
-                                        </tr>';
+                                            <tr>
+                                                <td>' . $item['id'] . '</td>
+                                                <td>' . $item['name'] . '</td>
+                                                <td>' . $item['dotthidua'] . '</td>
+                                                <td>' . $item['doituong'] . '</td>
+                                                <td><a href="../NLCS/assets/img/03_3361KHTH_31-08-2021.pdf">Tải Xuống</a></td>
+                                                <td>' . $item['created_at'] . '</td>
+                                            </tr>';
                                     }
+                                }
                                 ?>
                             </tbody>
                         </table>

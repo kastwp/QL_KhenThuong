@@ -124,9 +124,7 @@ include 'inc/footer.php';
     //     })
     // });
     function deleteDH(form) {
-        if (!confirm("Bạn có chắc chắn muốn xóa ?")) {
-            return;
-        }
+        return confirm("Bạn có chắc chắn muốn xóa ?");
         // form.onsubmit = function(e) {
         //     e.preventDefault();
         // }
