@@ -40,8 +40,12 @@ $row = mysqli_fetch_assoc($result);
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
                         <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                        <h2></h2>
-                        <h3><?=$_SESSION['hoten']?></h3>
+                        <h2><?=$_SESSION['hoten']?></h2>
+                        <?php
+                            if ($_SESSION['role']==0) {
+                                echo '<h3>Sinh viên</h3>';
+                            } else echo '<h3>Admin</h3>'
+                            ?>
                     </div>
                 </div>
 

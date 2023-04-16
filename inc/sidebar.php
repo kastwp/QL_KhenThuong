@@ -12,13 +12,18 @@
                 </a>
             </li>
             <!-- End Profile Page Nav -->
+            <?php
+            if ($_SESSION['role']==0) {
+                echo '<li class="nav-item">
+                    <a class="nav-link collapsed" href="pages-dhcb.php">
+                        <i class="bi bi-card-list"></i>
+                        <span>Danh Hiệu Của Bạn</span>
+                    </a>
+                </li>
+                ';
+            }
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-dhcb.php">
-                    <i class="bi bi-card-list"></i>
-                    <span>Danh Hiệu Của Bạn</span>
-                </a>
-            </li>
+            ?>
             <!-- End Register Page Nav -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="pages-dsdh.php">

@@ -78,7 +78,12 @@
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
                             <h6><?=$_SESSION['hoten']?></h6>
-                            <span>Sinh Viên</span>
+                            <?php
+                            if ($_SESSION['role']==0) {
+                                echo '<span>Sinh Viên</span>';
+                            } else echo '<span>Admin</span>'
+
+                            ?>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
@@ -86,7 +91,7 @@
 
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                            <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
                                 <i class="bi bi-gear"></i>
                                 <span>Quản Lí Tài Khoản</span>
                             </a>

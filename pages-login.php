@@ -87,20 +87,20 @@
                                             <label for="yourUsername" class="form-label">Mã Số Sinh Viên</label>
                                             <div class="input-group has-validation">
                                                 <input type="text" name="userName" class="form-control" id="yourUsername" required="" placeholder="Mã số đăng nhập">
-                                                <div class="invalid-feedback">Please enter your username.</div>
+                                                <div class="invalid-feedback">Vui lòng nhập tài khoản của bạn!</div>
                                             </div>
                                         </div>
 
                                         <div class="col-12">
                                             <label for="yourPassword" class="form-label">Mật khẩu</label>
                                             <input type="password" name="passWord" class="form-control" id="yourPassword" required="" placeholder="Mật khẩu">
-                                            <div class="invalid-feedback">Please enter your password!</div>
+                                            <div class="invalid-feedback">Vui lòng nhập mật khẩu của bạn!</div>
                                         </div>
 
                                         <div class="col-12">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                                                <label class="form-check-label" for="rememberMe">Ghi nhớ tôi</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -112,13 +112,13 @@
                                 </div>
                             </div>
 
-                            <div class="credits">
+                            <!-- <div class="credits"> -->
                                 <!-- All the links in the footer should remain intact. -->
                                 <!-- You can delete the links only if you purchased the pro version. -->
                                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                                Designed by Trần Quốc Tuấn
-                            </div>
+                                <!-- Designed by Trần Quốc Tuấn
+                            </div> -->
 
                         </div>
                     </div>

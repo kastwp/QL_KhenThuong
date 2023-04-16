@@ -22,11 +22,11 @@ include 'inc/sidebar.php';
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Danh sách Danh Hiệu</h1>
+        <h1>Danh Sách Danh Hiệu</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                <li class="breadcrumb-item active">Danh sách Danh Hiệu</li>
+                <li class="breadcrumb-item active">Danh Sách Danh Hiệu</li>
             </ol>
         </nav>
     </div>
@@ -38,7 +38,7 @@ include 'inc/sidebar.php';
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Danh Sách Danh Hiệu Của Bạn</h5>
+                        <h5 class="card-title">Danh Sách Danh Hiệu</h5>
                         <?php
                         if ($message != '') {
                         echo '<div class="alert alert-success">'.$message.'</div>';

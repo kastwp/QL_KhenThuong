@@ -1,6 +1,6 @@
 <?php
-include 'admin/inc/header.php';
-include 'admin/inc/sidebar.php';
+include 'inc/header.php';
+include 'inc/sidebar.php';
 ?>
 
 <main id="main" class="main">
@@ -11,7 +11,7 @@ include 'admin/inc/sidebar.php';
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                 <li class="breadcrumb-item active">Danh sách Danh Hiệu</li>
-                <li class="breadcrumb-item active">Đăng Kí</li>
+                <li class="breadcrumb-item active">Thêm danh hiệu</li>
             </ol>
         </nav>
     </div>
@@ -84,4 +84,4 @@ include 'admin/inc/sidebar.php';
                         <!-- End General Form Elements -->
 </main>
 
-<?php include 'admin/inc/footer.php'; ?>
+<?php include 'inc/footer.php'; ?>

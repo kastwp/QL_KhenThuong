@@ -9,8 +9,6 @@
         <div class="copyright">
             Điện thoại: (84-292) 3832663 - (84-292) 3838474; Fax: (84-292) 3838474; Email: dhct@ctu.edu.vn
         </div>
-        <div class="credits">
-            Designed by Trần Quốc Tuấn</div>
     </footer>
     <!-- End Footer -->
 
