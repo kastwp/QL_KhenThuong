@@ -1306,3 +1306,21 @@ h6 {
     font-size: 13px;
     color: #012970;
 }
+
+/* pagation */
+
+.pagation {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.pagation a {
+    border: 1px solid blue !important;
+    padding: 0px 5px 0 5px;
+    margin-left: 0;
+}
+.search {
+    display: flex;
+}

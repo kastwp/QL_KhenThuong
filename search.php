@@ -2,37 +2,17 @@
 include 'lib/database.php';
 $db = new Database();
 
-$conn = mysqli_connect('localhost', 'root', '', 'nlcs');
-
-$results_per_page = 2;
-
-$query = 'SELECT *,dkdh.id as dh_id FROM dangky_danhhieu dkdh
-JOIN danhhieu dh ON dkdh.dh_id = dh.id
-JOIN profile p ON dkdh.user_id = p.user_id';
-
-$result = mysqli_query($conn, $query);
-
-$number_of_result = mysqli_num_rows($result);
-
-//determine the total number of pages available
-
-$number_of_page = ceil ($number_of_result / $results_per_page);
-
-if (!isset ($_GET['page']) ) {
-
-    $page = 1;
-    
+if(isset($_GET['search'])) {
+    $value = $_GET['search'];
+    $sql = "SELECT *,dkdh.id as dh_id FROM dangky_danhhieu dkdh
+        JOIN danhhieu dh ON dkdh.dh_id = dh.id
+        JOIN profile p ON dkdh.user_id = p.user_id where hoten like '%$value%'";
 } else {
-    
-    $page = $_GET['page'];
-    
+    $sql = "SELECT *,dkdh.id as dh_id FROM dangky_danhhieu dkdh
+        JOIN danhhieu dh ON dkdh.dh_id = dh.id
+        JOIN profile p ON dkdh.user_id = p.user_id";
 }
 
-$page_first_result = ($page-1) * $results_per_page;
-
-$sql = "SELECT *,dkdh.id as dh_id FROM dangky_danhhieu dkdh
-        JOIN danhhieu dh ON dkdh.dh_id = dh.id
-        JOIN profile p ON dkdh.user_id = p.user_id LIMIT ". $page_first_result . ',' . $results_per_page;
 $data = [];
 $result = $db->select($sql);
 while ($row = mysqli_fetch_array($result, 1)) {
@@ -40,12 +20,6 @@ while ($row = mysqli_fetch_array($result, 1)) {
 }
 include 'inc/header.php';
 include 'inc/sidebar.php';
-
-for($page = 1; $page<= $number_of_page; $page++) 
-?>
-
-    <a href = "index2.php?page=<?php echo  $page ?>"><?php echo $page?></a>
- <?   
 
 
 ?>
@@ -72,8 +46,10 @@ for($page = 1; $page<= $number_of_page; $page++)
                         <form action="search.php" method="get">
                             <div class="input-group rounded">
                                 <input type="search" name="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                <button>search</button>
                             </div>
                         </form>
+
                         
                         <!-- Default Table -->
                         <table class="table">
@@ -130,18 +106,8 @@ for($page = 1; $page<= $number_of_page; $page++)
                         </table>
                         <!-- End Default Table Example -->
                     </div>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <?php 
-                                for($page = 1; $page<= $number_of_page; $page++) 
-                                {
-                                ?>
-                                    <li class="page-item"><a class="page-link" href="pages-xdkt.php?page=<?php echo $page ?>"><?php echo $page?></a></li>
-                                <?php
-                                }
-                            ?>
-                        </ul>
-                    </nav>
+                    
+                    
                 </div>
 
             </div>
@@ -149,6 +115,7 @@ for($page = 1; $page<= $number_of_page; $page++)
         </div>
 
     </section>
+
 </main>
 <!-- End #main -->
 <form action="" id="formActionDH" method="POST">
